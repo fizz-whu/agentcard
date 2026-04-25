@@ -1,0 +1,14 @@
+{
+  "name": "@agentcard/infra",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "deploy": "sst deploy",
+    "dev": "sst dev",
+    "remove": "sst remove"
+  },
+  "devDependencies": {
+    "sst": "^3.0.0",
+    "typescript": "^5.4.0"
+  }
+}

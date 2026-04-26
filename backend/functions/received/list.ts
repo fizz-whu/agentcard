@@ -10,8 +10,12 @@ export const handler: APIGatewayProxyHandlerV2 = async (event) => {
   const result = await db.send(new QueryCommand({
     TableName: TABLE,
     KeyConditionExpression: "pk = :pk AND begins_with(sk, :prefix)",
-    ExpressionAttributeValues: { ":pk": `USER#${user.userId}`, ":prefix": "CARD#" },
+    ExpressionAttributeValues: {
+      ":pk": `USER#${user.userId}`,
+      ":prefix": "RECEIVED#",
+    },
+    ScanIndexForward: false,
   }));
 
-  return ok({ cards: result.Items ?? [] });
+  return ok({ received: result.Items ?? [] });
 };

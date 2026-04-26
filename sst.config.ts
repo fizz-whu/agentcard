@@ -95,6 +95,21 @@ export default $config({
       environment,
       link: [cardsTable],
     });
+    api.route("POST /sessions/{id}/close", {
+      handler: "backend/functions/sessions/close.handler",
+      environment,
+      link: [cardsTable],
+    });
+    api.route("GET /cards/avatar-url", {
+      handler: "backend/functions/cards/avatarUrl.handler",
+      environment,
+      link: [assetsBucket],
+    });
+    api.route("GET /received", {
+      handler: "backend/functions/received/list.handler",
+      environment,
+      link: [cardsTable],
+    });
 
     return {
       ApiUrl: api.url,

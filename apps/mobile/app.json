@@ -34,10 +34,10 @@
       "typedRoutes": true
     },
     "extra": {
-      "apiUrl": "",
-      "cognitoUserPoolId": "",
-      "cognitoClientId": "",
-      "assetsBucketUrl": ""
+      "apiUrl": "https://5ftn4385ci.execute-api.us-west-2.amazonaws.com",
+      "cognitoUserPoolId": "us-west-2_kc7vTAPk3",
+      "cognitoClientId": "dpg44jq8igglc0cjqmks7e1ec",
+      "assetsBucketUrl": "https://agentcard-dev-assetsbucketbucket-omhhnhte.s3.us-west-2.amazonaws.com"
     }
   }
 }
